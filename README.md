@@ -15,10 +15,10 @@ The suggested order would be:
 - Overview script, in this one we used DESeq2 tool and some edgeR to take a overview (clustering with different distance, PCA and other techniques)
 - DE_analysis with DESeq2
 - DE_analysis with edgeR
-- CMScaller
+- CMScaller (not yet)
 - Select a set of genes and perform some visualization
-- Venn Diagrams
-- Volvano plots
+- Venn Diagrams (not yet)
+- Volvano plots (not yet)
 
 
 The input for those script is always a count matrix. This matrix could come form featureounts or HTseq or any other tool for gene expression cuantification 
