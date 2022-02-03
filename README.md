@@ -15,10 +15,10 @@ The suggested order would be:
 - Overview script, in this one we used DESeq2 tool and some edgeR to take a overview (clustering with different distance, PCA and other techniques)
 - DE_analysis with DESeq2
 - DE_analysis with edgeR
-- CMScaller (not yet)
+- CMSclasification/CMScaller
+- immunedeconv(MCP_counter, EPIC)
 - Select a set of genes and perform some visualization
-- Venn Diagrams (not yet)
-- Volvano plots (not yet)
+
 
 
 The input for those script is always a count matrix. This matrix could come form featureounts or HTseq or any other tool for gene expression cuantification 
@@ -27,10 +27,11 @@ The input for those script is always a count matrix. This matrix could come form
 ### Installation
 
 There is no instalation needed, you need to have R installed to run those scrpts
+Immunedeconv needs a bit more attention (https://icbi-lab.github.io/immunedeconv/)
 
 **Required R-version etc.**
 
-Those script were make and tested in R 3.6, using BiocManager to install the neccesary packages from Bioconductor or Cran. Be waare that you need permision to install packages
+Those script were make and tested in R 3.6, using BiocManager to install the neccesary packages from Bioconductor or Cran. Be aware that you need admin permision to install packages
 
 
 ### Usage
@@ -89,11 +90,11 @@ Bed file
 
 ___CMScaller___
 Csv file with the probabilities of that sample belonging to an specific CMS group, the first column os the prediction column
+cluster plot using those probabilities. As a visualization you will get a heatmap, genset enrichment plot and PCA.
+
+___CMSclasifier___
+Csv file with the probabilities of that sample belonging to an specific CMS group, the first column os the prediction column
 cluster plot using those probabilities
 
-__Venn_
-A ven diagram and the possibility of have the list of the genes belonging to each group
-
-__Volcano__
-A volcano plot, for this plot you need a list of genes/exons with pval and log2fold cange (usually coming from DE analysis)
-
+___immunedeconv(MCP_counter, EPIC)___
+Bar and scater plot with the different cell clasifications
